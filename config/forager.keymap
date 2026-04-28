@@ -191,10 +191,10 @@
         default_layer {
             label = "DEF";
             bindings = <
-  &kp Q         &kp W            &kp E            &kp R              &kp T                                    &kp Y                                 &kp U               &kp I            &kp O            &kp P
-  &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G                                    &kp H                                 &hmr RIGHT_SHIFT J  &hmr LEFT_GUI K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
-  &kp Z         &kp X            &kp C            &kp V              &kp B                                    &kp N                                 &kp M               &kp COMMA        &kp DOT          &as LS(SLASH) SLASH
-                                                  &lt 1 BACKSPACE    &thumb_ht LS(LA(LC(LEFT_GUI))) ESCAPE    &thumb_ht LS(LA(LEFT_CONTROL)) ENTER  &lt 2 SPACE
+  &kp Q         &kp W                &kp E        &kp R            &kp T                                    &kp Y                                 &kp U        &kp I        &kp O                &kp P
+  &hml LSHFT A  &hml LEFT_CONTROL S  &hml LALT D  &hml LCMD F      &kp G                                    &kp H                                 &hmr LCMD J  &hmr LALT K  &hmr LEFT_CONTROL L  &hmr LSHFT SEMICOLON
+  &kp Z         &kp X                &kp C        &kp V            &kp B                                    &kp N                                 &kp M        &kp COMMA    &kp DOT              &as LS(SLASH) SLASH
+                                                  &lt 1 BACKSPACE  &thumb_ht LS(LA(LC(LEFT_GUI))) ESCAPE    &thumb_ht LS(LA(LEFT_CONTROL)) ENTER  &lt 2 SPACE
             >;
         };
 
