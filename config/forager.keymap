@@ -67,21 +67,6 @@
     combos {
         compatible = "zmk,combos";
 
-        arr-right-paren {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <6 7>;
-        };
-
-        arr-right-curly {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <7 8>;
-        };
-
-        arr-right-square-bracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <5 6>;
-        };
-
         def-ui-to-tab {
             bindings = <&kp TAB>;
             key-positions = <10 11>;
@@ -127,6 +112,15 @@
   &bt BT_CLR  &trans  &trans  &trans  &bt BT_SEL 0    &trans  &trans  &trans  &trans                &trans
                               &trans  &trans          &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        both {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
