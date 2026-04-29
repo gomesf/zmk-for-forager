@@ -2,6 +2,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -55,7 +56,7 @@
         hold_tap_layer: hold_tap_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_LAYER";
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -94,10 +95,10 @@
         default_layer {
             label = "Base";
             bindings = <
-  &kp Q         &kp W                &kp E        &kp R        &kp T    &kp Y  &kp U        &kp I        &kp O                &kp P
-  &hml LSHFT A  &hml LEFT_CONTROL S  &hml LALT D  &hml LCMD F  &kp G    &kp H  &hmr LCMD J  &hmr LALT K  &hmr LEFT_CONTROL L  &hmr LSHFT SEMICOLON
-  &kp Z         &kp X                &kp C        &kp V        &kp B    &kp N  &kp M        &kp COMMA    &kp DOT              &kp SLASH
-                                                  &none        &none    &none  &none
+  &kp Q         &kp W                &kp E        &kp R        &kp T                      &kp Y                    &kp U        &kp I        &kp O                &kp P
+  &hml LSHFT A  &hml LEFT_CONTROL S  &hml LALT D  &hml LCMD F  &kp G                      &kp H                    &hmr LCMD J  &hmr LALT K  &hmr LEFT_CONTROL L  &hmr LSHFT SEMICOLON
+  &kp Z         &kp X                &kp C        &kp V        &kp B                      &kp N                    &kp M        &kp COMMA    &kp DOT              &kp SLASH
+                                                  &none        &hold_tap_layer 1 SPACE    &hold_tap_layer 2 ENTER  &none
             >;
         };
 
@@ -121,10 +122,10 @@
 
         both_layer {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans    &trans  &trans
+  &trans      &trans  &trans  &trans  &bt BT_SEL 2    &trans  &trans  &trans  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP
+  &trans      &trans  &trans  &trans  &bt BT_SEL 1    &trans  &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN
+  &bt BT_CLR  &trans  &trans  &trans  &bt BT_SEL 0    &trans  &trans  &trans  &trans                &trans
+                              &trans  &trans          &trans  &trans
             >;
         };
     };
