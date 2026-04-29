@@ -95,19 +95,19 @@
         default_layer {
             label = "Base";
             bindings = <
-  &kp Q         &kp W                &kp E        &kp R        &kp T                      &kp Y                    &kp U        &kp I        &kp O                &kp P
-  &hml LSHFT A  &hml LEFT_CONTROL S  &hml LALT D  &hml LCMD F  &kp G                      &kp H                    &hmr LCMD J  &hmr LALT K  &hmr LEFT_CONTROL L  &hmr LSHFT SEMICOLON
-  &kp Z         &kp X                &kp C        &kp V        &kp B                      &kp N                    &kp M        &kp COMMA    &kp DOT              &kp SLASH
-                                                  &none        &hold_tap_layer 1 SPACE    &hold_tap_layer 2 ENTER  &none
+  &kp Q         &kp W                &kp E        &kp R        &kp T                      &kp Y                    &kp U          &kp I        &kp O                &kp P
+  &hml LSHFT A  &hml LEFT_CONTROL S  &hml LALT D  &hml LCMD F  &kp G                      &kp H                    &hmr LCMD J    &hmr LALT K  &hmr LEFT_CONTROL L  &hmr LSHFT SEMICOLON
+  &kp Z         &kp X                &kp C        &kp V        &kp B                      &kp N                    &kp M          &kp COMMA    &kp DOT              &kp SLASH
+                                                  &kp ESCAPE   &hold_tap_layer 1 SPACE    &hold_tap_layer 2 ENTER  &kp BACKSPACE
             >;
         };
 
         lower_layer {
             bindings = <
-  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans    &trans  &trans
+  &kp N1     &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8            &kp N9             &kp N0
+  &kp GRAVE  &trans  &trans  &trans  &trans    &trans  &trans  &kp SINGLE_QUOTE  &kp MINUS          &kp EQUAL
+  &trans     &trans  &trans  &trans  &trans    &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+                             &trans  &trans    &trans  &trans
             >;
         };
 
